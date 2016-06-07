@@ -36,7 +36,6 @@ func handle(w http.ResponseWriter, r *http.Request) {
     <Message to="%s">From %s:
     %s</Message>
 </Response>
-}
 `
 	fmt.Fprintf(w, tpl, forwardTo, from, body)
 }
