@@ -1,0 +1,6 @@
+{
+	"ImportPath": "github.com/jharlap/sms_forwarder",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v62",
+	"Deps": []
+}
