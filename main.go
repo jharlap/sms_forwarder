@@ -13,6 +13,7 @@ func main() {
 	port := os.Getenv("PORT")
 	forwardTo = os.Getenv("FORWARD_TO")
 
+	log.Printf("Starting server. PORT: %s FORWARD_TO: %s", port, forwardTo)
 	http.ListenAndServe("0.0.0.0:"+port, http.HandlerFunc(handle))
 }
 
