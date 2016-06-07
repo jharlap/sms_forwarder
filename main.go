@@ -18,6 +18,12 @@ func main() {
 }
 
 func handle(w http.ResponseWriter, r *http.Request) {
+
+	if r.URL.Path != "/sms" {
+		w.WriteHeader(http.StatusNoContent)
+		return
+	}
+
 	if err := r.ParseForm(); err != nil {
 		log.Println("Error parsing form:", err)
 		w.WriteHeader(http.StatusBadRequest)
